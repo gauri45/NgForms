@@ -1,0 +1,72 @@
+<p> list-employee works! </p>
+<!----<table>
+  <tr>
+    <th> ID</th>
+    <th> Name</th>
+    <th> Gender</th>
+    <th> Email</th>
+    <th> PhoneNumber</th>
+    <th> ContactPref</th>
+    <th> Department</th>
+    <th> Location</th>
+    <th> Date of Joining</th>
+    <th> Photo</th>
+ </tr>
+<tr *ngFor="let emp of employee">
+  <td>{{emp.id}} </td>
+  <td>{{emp.name}}</td>
+  <td>{{emp.gender}}</td>
+  <td>{{emp.email}}</td>
+  <td>{{emp.phoneNumber}}</td>
+  <td>{{emp.contactPref}}</td>
+  <td>{{emp.department}}</td>
+  <td>{{emp.location}} </td>
+  <td>{{emp.doj}}</td>
+  <td>{{emp.photoPath}}</td>
+  <td><img [src]="emp.photoPath" alt="image" class="imageClass"></td>
+</tr>
+</table>-->
+<div *ngFor="let emp of employee">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">{{emp.name | uppercase | emptitle : emp.gender}}</h3>
+    </div>
+  
+    <div class="card-body">
+      <div class="row">
+        <div class="col"><img [src]="emp.photoPath" alt="image" class="imageClass"></div>
+        <div class="col"> 
+          <div class="row">
+             <div class="col">ID:</div>
+             <div class="col">{{emp.id}}</div>
+          </div>
+          <div class="row">
+              <div class="col">Name:</div>
+              <div class="col">{{emp.name}}</div>
+           </div>
+           <div class="row">
+              <div class="col">Email:</div>
+              <div class="col">{{emp.email}}</div>
+           </div>
+           <div class="row">
+              <div class="col">contactPref:</div>
+              <div class="col">{{emp.contactPref}}</div>
+           </div>
+           <div class="row">
+              <div class="col">Department:</div>
+              <div class="col">{{emp.department}}</div>
+           </div>
+           <div class="row">
+              <div class="col">Location:</div>
+              <div class="col">{{emp.location}}</div>
+           </div>
+           <div class="row">
+              <div class="col">DOJ:</div>
+              <div class="col">{{emp.doj}}</div>
+           </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+  
